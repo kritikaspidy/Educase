@@ -42,12 +42,14 @@ Request body:
   "longitude": 77.2090
 }
 ```
+![Add School API](images/post-school.png)
 
 2. List Schools
 ```bash 
 GET /listSchools?latitude=28.7041&longitude=77.1025
 ```
 Returns schools sorted by distance from the user's location.
+![List Schools API](images/get-list.png)
 
 
 ## Setup Instructions
