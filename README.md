@@ -31,8 +31,9 @@ school-management-api/
 ## API Endpoints
 
 1. Add School
-   POST /addschool
 ```bash
+POST /addschool
+
 Request body:
 {
   "name": "Green Valley School",
