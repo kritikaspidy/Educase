@@ -1,0 +1,67 @@
+{
+  "info": {
+    "_postman_id": "eefa13b3-ff4d-4e5e-a8ee-fae15790f4e3",
+    "name": "educase",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "32802132"
+  },
+  "item": [
+    {
+      "name": "add-school",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Green Valley School\",\n  \"address\": \"Noida Sector 12\",\n  \"latitude\": 28.6139,\n  \"longitude\": 77.2090\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8000/addSchool",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "addSchool"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "list-schools",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8000/listSchools?latitude=28.7041&longitude=77.1025",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "listSchools"
+          ],
+          "query": [
+            {
+              "key": "latitude",
+              "value": "28.7041"
+            },
+            {
+              "key": "longitude",
+              "value": "77.1025"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
