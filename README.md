@@ -12,8 +12,6 @@ A Node.js + Express.js + MySQL backend for managing school data.
 - Node.js
 - Express.js
 - MySQL
-- mysql2
-- dotenv
 
 ## Project Structure
 
@@ -30,4 +28,55 @@ school-management-api/
 ├── package.json
 └── server.js
 ```
+## API Endpoints
 
+1. Add School
+   POST /addschool
+```bash
+Request body:
+{
+  "name": "Green Valley School",
+  "address": "Noida Sector 12",
+  "latitude": 28.6139,
+  "longitude": 77.2090
+}
+```
+
+2. List Schools
+GET /listSchools?latitude=28.7041&longitude=77.1025
+Returns schools sorted by distance from the user's location.
+
+
+## Setup Instructions
+
+1. Clone the repository
+```bash
+git clone https://github.com/YOUR_USERNAME/school-management-api.git
+```
+2. Install dependencies
+```bash 
+npm install cors dotenv mysql
+```
+3. Create .env file
+```bash
+PORT=5000
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=your_password
+DB_NAME=school_management
+```
+4. Run the server
+```bash
+npm run dev
+```
+
+## Database Schema
+```bash
+CREATE TABLE schools ( 
+  id INT AUTO_INCREMENT PRIMARY KEY, 
+  name VARCHAR(255) NOT NULL, 
+  address VARCHAR(255) NOT NULL, 
+  latitude FLOAT NOT NULL, 
+  longitude FLOAT NOT NULL 
+  );
+```
