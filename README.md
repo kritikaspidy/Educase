@@ -43,7 +43,9 @@ Request body:
 ```
 
 2. List Schools
+```bash 
 GET /listSchools?latitude=28.7041&longitude=77.1025
+```
 Returns schools sorted by distance from the user's location.
 
 
